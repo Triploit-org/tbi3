@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{76D813A9-EC1E-4B94-95FB-86DCAC871DD8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TBI3</RootNamespace>
+    <AssemblyName>TBI3</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IntermediateOutputPath>C:\Users\Survari\AppData\Local\Temp\vs13D.tmp\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IntermediateOutputPath>C:\Users\Survari\AppData\Local\Temp\vs13D.tmp\Release\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Parser\BinaryDec.cs" />
+    <Compile Include="Parser\Command.cs" />
+    <Compile Include="Parser\commands\ADD.cs" />
+    <Compile Include="Parser\commands\ATS.cs" />
+    <Compile Include="Parser\commands\CLS.cs" />
+    <Compile Include="Parser\commands\DIV.cs" />
+    <Compile Include="Parser\commands\HLT.cs" />
+    <Compile Include="Parser\commands\INP.cs" />
+    <Compile Include="Parser\commands\MOD.cs" />
+    <Compile Include="Parser\commands\MOV.cs" />
+    <Compile Include="Parser\commands\MUL.cs" />
+    <Compile Include="Parser\commands\NTS.cs" />
+    <Compile Include="Parser\commands\OTS.cs" />
+    <Compile Include="Parser\commands\OUTL.cs" />
+    <Compile Include="Parser\commands\OUT.cs" />
+    <Compile Include="Parser\commands\POP.cs" />
+    <Compile Include="Parser\commands\PTC.cs" />
+    <Compile Include="Parser\commands\STA.cs" />
+    <Compile Include="Parser\commands\STO.cs" />
+    <Compile Include="Parser\commands\SUB.cs" />
+    <Compile Include="Parser\Converter.cs" />
+    <Compile Include="Parser\Tokenizer.cs" />
+    <Compile Include="Programm.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Runtime\Commands.cs" />
+    <Compile Include="Runtime\Register.cs" />
+    <Compile Include="Runtime\Runtime.cs" />
+    <Compile Include="Runtime\Stack.cs" />
+    <Compile Include="Runtime\Registers.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <Compile Include="Parser\Parser.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
