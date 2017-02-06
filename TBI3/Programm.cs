@@ -442,7 +442,7 @@ namespace BININ
                 }
                 else
                 {
-                    string code = "00000000";
+                    string code = args[0];
                     string[] line;
                     line = File.ReadAllLines(args[0]);
 
