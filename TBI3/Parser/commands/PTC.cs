@@ -10,6 +10,7 @@ namespace BININ.Parser.commands
     {
         public override void Execute()
         {
+            // Console.Write(Runtime.Stack.GetFromStack());
             Console.Write((char) Runtime.Stack.GetFromStack());
         }
 

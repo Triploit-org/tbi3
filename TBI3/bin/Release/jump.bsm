@@ -1,0 +1,17 @@
+65
+nts
+sta # LADE 65 IN AX
+pop # SCHMEISS 65 VOM STACK
+
+8
+nts
+2
+nts
+add # ADDIERE 8 UND 2
+
+mrk # MARKE
+ats # LEGE AX AUF DEN STACK
+ptc
+pop
+ptc
+jen # IF HX=0 >> MARKE

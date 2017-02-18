@@ -30,7 +30,7 @@ namespace BININ.Parser
                 {
                     Runtime.Runtime.ParserExit = false;
                     Runtime.Runtime.Parser = false;
-                    break;
+                    return;
                 }
 
                 if (li == 0)

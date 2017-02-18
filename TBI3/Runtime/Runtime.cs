@@ -31,18 +31,14 @@ namespace BININ.Runtime
         {
             // Console.WriteLine("RUNTIME: Gestartet!");
             // Console.ReadKey();
-            return;
 
-            if (Loop)
+            while (true)
             {
-                while(true)
+                if (Parser)
                 {
-                    if (Parser)
+                    if (Console.ReadKey(true).Key == ConsoleKey.Escape)
                     {
-                        if (Console.ReadKey(true).Key == ConsoleKey.Escape)
-                        {
-                            ParserExit = true;
-                        }
+                        ParserExit = true;
                     }
                 }
             }
